@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content>
+	<meta name="keywords" content>
+	
+	<title>linux虚拟机网卡配置 - Hexo</title>
+  <link rel="alternate" href type="application/atom+xml">
+	<link rel="shortcut icon" href>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'huq1ytd',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<div class="body-box">
+		<div class="content-box">
+			<div class="sidebar">
+	<div class="widget-me">
+		<div class="me-avatar">
+			<a href="/"><img src="/imgs/avatar.jpg"/></a>
+		</div>
+		<h2 class="me-name">
+			<a href="/">桂花</a>
+		</h2>
+	</div>
+	<div class="widget-nav">
+		<nav class="nav-list">
+			<ul>
+				
+					<li>
+						<a href="/" class="">
+							<span>主页</span>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives/" class="">
+							<span>归档</span>
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar-wrap">
+		<div class="widget-tags">
+			<h2 class="widget-title">标签</h2>
+			
+		</div>
+	</div>
+</div>
+			<div class="content-article">
+				<i class="mobile-toggle" style="display:none;"><img src="/imgs/menu.png"/></i>
+				<div class="content-article-box">
+					<article class="article  article-post">
+    <h2 class="article-title cl">
+        <a href="/2019/08/01/hello-world/" title="linux虚拟机网卡配置" class="title-main">linux虚拟机网卡配置</a>
+        <small class="article-time">2019-08-01</small>
+    </h2>
+    <div class="article-con">
+        
+        <h2 id="网卡配置文件所在的位置：-etc-sysconfig-network-scripts"><a href="#网卡配置文件所在的位置：-etc-sysconfig-network-scripts" class="headerlink" title="网卡配置文件所在的位置：/etc/sysconfig/network-scripts/"></a>网卡配置文件所在的位置：/etc/sysconfig/network-scripts/</h2><p>ls 会看到以ifcfg开头的文件<br>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>TYPE=”Ethernet” 网卡类型<br>BOOTPROTO=”dhcp” 网卡获取IP的形式，ip配置方式(NONE/DHCP/STATIC)<br>DEFROUTE=”yes”<br>PEERDNS=”yes”<br>PEERROUTES=”yes”<br>IPV4_FAILURE_FATAL=”no”</p>
+<p>IPV6INIT=”yes”<br>IPV6_AUTOCONF=”yes”<br>IPV6_DEFROUTE=”yes”<br>IPV6_PEERDNS=”yes”<br>IPV6_PEERROUTES=”yes”<br>IPV6_FAILURE_FATAL=”no”<br>IPV6_ADDR_GEN_MODE=”stable-privacy”</p>
+<p>NAME=”ens33” 网卡名称<br>UUID=”ae04ed91-a630-435e-b327-583632895fa0” 通用唯一标识码<br>DEVICE=”ens33” 网卡名称<br>ONBOOT=”yes” 开机加载网卡配置文件<br>ZONE=public</p>
+<p>TYPE=”Ethernet” 网卡类型<br>BOOTPROTO=”static” 网卡获取IP的形式，ip配置方式(NONE/DHCP/STATIC)<br>DEFROUTE=”yes”<br>PEERDNS=”yes”<br>PEERROUTES=”yes”<br>IPV4_FAILURE_FATAL=”no”</p>
+<p>IPV6INIT=”yes”<br>IPV6_AUTOCONF=”yes”<br>IPV6_DEFROUTE=”yes”<br>IPV6_PEERDNS=”yes”<br>IPV6_PEERROUTES=”yes”<br>IPV6_FAILURE_FATAL=”no”<br>IPV6_ADDR_GEN_MODE=”stable-privacy”</p>
+<p>NAME=”ens33” 网卡名称<br>UUID=”ae04ed91-a630-435e-b327-583632895fa0” 通用唯一标识码<br>DEVICE=”ens33” 网卡名称<br>ONBOOT=”yes” 开机加载网卡配置文件<br>ZONE=public<br>IPADDR=192.168.10.99 配置的IP<br>NETMASK=255.255.255.0 子网掩码<br>GATEWAY=192.168.10.1 网关<br>DNS1=114.114.114.114 首选DNS<br>DNS2=8.8.8.8</p>
+
+    </div>
+    
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            
+                <div class="navgition-prev">
+                    <h2 class="navgition-title">上一篇: <a href="/2019/08/03/p/"> PHP </a></h2>
+                </div>
+            
+
+            
+                <div class="navgition-next">
+                    <h2 class="navgition-title">下一篇: <a href="javascript:void(0);">暂无</a></h2>
+                </div>
+            
+        </div>
+    </div>
+    
+</article>
+					
+				</div>
+				<footer class="footer">
+	<p class="footer-intro">
+		
+		@2019 Hexo.
+		<br/>
+		站点描述
+	</p>
+	<a href="https://github.com/shijuuu/hexo-theme-mokusei" target="_blank" class="extra">MOKUSEI</a>
+</footer>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/org/jquery.min.js"></script>
+	<script src="/js/feature.js"></script>
+	<script>
+		var Feature = new Feature();
+		Feature.init();
+	</script>
+</body>
+</html>

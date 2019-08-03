@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content>
+	<meta name="keywords" content>
+	
+	<title>PHP - Hexo</title>
+  <link rel="alternate" href type="application/atom+xml">
+	<link rel="shortcut icon" href>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'huq1ytd',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<div class="body-box">
+		<div class="content-box">
+			<div class="sidebar">
+	<div class="widget-me">
+		<div class="me-avatar">
+			<a href="/"><img src="/imgs/avatar.jpg"/></a>
+		</div>
+		<h2 class="me-name">
+			<a href="/">桂花</a>
+		</h2>
+	</div>
+	<div class="widget-nav">
+		<nav class="nav-list">
+			<ul>
+				
+					<li>
+						<a href="/" class="">
+							<span>主页</span>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives/" class="">
+							<span>归档</span>
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar-wrap">
+		<div class="widget-tags">
+			<h2 class="widget-title">标签</h2>
+			
+		</div>
+	</div>
+</div>
+			<div class="content-article">
+				<i class="mobile-toggle" style="display:none;"><img src="/imgs/menu.png"/></i>
+				<div class="content-article-box">
+					<article class="article  article-post">
+    <h2 class="article-title cl">
+        <a href="/2019/08/03/p/" title="PHP" class="title-main">PHP</a>
+        <small class="article-time">2019-08-03</small>
+    </h2>
+    <div class="article-con">
+        
+        <h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><h2 id="php是嵌入html页面中的脚本语言"><a href="#php是嵌入html页面中的脚本语言" class="headerlink" title="php是嵌入html页面中的脚本语言"></a>php是嵌入html页面中的脚本语言</h2><p>php的基础<br>1：php的脚本是以<?php开始，以?>结束或者最后不加？&gt;<br>php文件扩展名一般都是以点php为结尾，还可以命名为phtml等cig和module扩展名<br>php一般配合apache服务器和nginx服务器来使用数据可以一般是以mysql来配合</p>
+<h2 id="PHP中的数据类型"><a href="#PHP中的数据类型" class="headerlink" title="PHP中的数据类型"></a>PHP中的数据类型</h2><p>布尔类型（bool）   True False<br>整数（int）        正数  0  负数  0-99999999999    123<br>浮点型（float）     3.14<br>字符串（string）   ‘abc123’  “123”  &lt;&lt;&lt;EOF   abcdefg   EOF<br>资源（resource）   STDIN   STDOUT   STDERROR   打开文件  打开网络连接<br>空类型（NULL）      NULL<br>数组（array）      [1,2,3,4,5,6,7,8,9,]<br>对象（class）       new person()</p>
+<h2 id="PHP输出类型"><a href="#PHP输出类型" class="headerlink" title="PHP输出类型"></a>PHP输出类型</h2><p>echo print printf sprintf print_r die var_dump  一般常用echo和print等var_dump<br>PHP中的变量和常量<br>变量一般是以$符号开始，后面跟着变量名称列如：$a等一下<br>变量名称必须以字母或者下划线字符开始列如：$_a<br>变量名只能包含字母和数字字符以及下划线（A-z,0-9和_）<br>变量名不能为空<br>变量名是区分大小写的例如$a和$A是两个不同的变量</p>
+<h2 id="PHP常量"><a href="#PHP常量" class="headerlink" title="PHP常量"></a>PHP常量</h2><p>常量一旦赋值不会改变，尽量使用带小写<br>常量分为系统常量和自定义常量。<br>系统常量可以理解为值不会改变的量<br>自定义常量<br>使用php中的函数define（）来定义自定义常量常量在使用中的时候不需要$符号</p>
+<h2 id="PHP中的变量和常量"><a href="#PHP中的变量和常量" class="headerlink" title="PHP中的变量和常量"></a>PHP中的变量和常量</h2><p>常用的系统变量<br><em>FILE</em>:php程序文件名/绝对路径<br>_DIR_被调用的文件脚本所在的目录<br>_FUNCTION_函数名<br>_LINE_php程序文件行数<br>PHP_VERSION当前解析器的版本号<br>PHP_OS执行当前PHP版本操作系统名称</p>
+<p>##PHP中的EOF<br>开头是以&lt;&lt;&lt;EOF结尾是以开头字母一样的来结尾在EOF中结束标识转义必须顶格独自占一行（必须从行首开始，前后不能衔接如何空白和字符）<br>开始标识可以不带引号或带单双引号，不带引号与带双引号效果一至，解释内嵌的变量和转义符号，带单引号则不解释内嵌的变量和转义符号。<br>得内容需要内嵌引号（单双引号）时，不需要加转义符，本身对单双引号</p>
+
+    </div>
+    
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            
+                <div class="navgition-prev">
+                    <h2 class="navgition-title">上一篇: <a href="/2019/08/03/html/"> HTML+CSS+Javascript </a></h2>
+                </div>
+            
+
+            
+                <div class="navgition-next">
+                    <h2 class="navgition-title">下一篇: <a href="/2019/08/01/hello-world/">linux虚拟机网卡配置 </a></h2>
+                </div>
+            
+        </div>
+    </div>
+    
+</article>
+					
+				</div>
+				<footer class="footer">
+	<p class="footer-intro">
+		
+		@2019 Hexo.
+		<br/>
+		站点描述
+	</p>
+	<a href="https://github.com/shijuuu/hexo-theme-mokusei" target="_blank" class="extra">MOKUSEI</a>
+</footer>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/org/jquery.min.js"></script>
+	<script src="/js/feature.js"></script>
+	<script>
+		var Feature = new Feature();
+		Feature.init();
+	</script>
+</body>
+</html>
