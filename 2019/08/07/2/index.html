@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content>
+	<meta name="keywords" content>
+	
+	<title>PHP - Hexo</title>
+  <link rel="alternate" href type="application/atom+xml">
+	<link rel="shortcut icon" href>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'huq1ytd',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<div class="body-box">
+		<div class="content-box">
+			<div class="sidebar">
+	<div class="widget-me">
+		<div class="me-avatar">
+			<a href="/"><img src="/imgs/avatar.jpg"/></a>
+		</div>
+		<h2 class="me-name">
+			<a href="/">桂花</a>
+		</h2>
+	</div>
+	<div class="widget-nav">
+		<nav class="nav-list">
+			<ul>
+				
+					<li>
+						<a href="/" class="">
+							<span>主页</span>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives/" class="">
+							<span>归档</span>
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar-wrap">
+		<div class="widget-tags">
+			<h2 class="widget-title">标签</h2>
+			
+		</div>
+	</div>
+</div>
+			<div class="content-article">
+				<i class="mobile-toggle" style="display:none;"><img src="/imgs/menu.png"/></i>
+				<div class="content-article-box">
+					<article class="article  article-post">
+    <h2 class="article-title cl">
+        <a href="/2019/08/07/2/" title="PHP" class="title-main">PHP</a>
+        <small class="article-time">2019-08-07</small>
+    </h2>
+    <div class="article-con">
+        
+        <h2 id="php新闻展示页面，循环展示。"><a href="#php新闻展示页面，循环展示。" class="headerlink" title="php新闻展示页面，循环展示。"></a>php新闻展示页面，循环展示。</h2><p>代码实现</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">        table &#123;</span><br><span class="line">            width: 80%;</span><br><span class="line">        &#125;</span><br><span class="line">        table tr&#123;</span><br><span class="line">            height: 40px;</span><br><span class="line">        &#125;</span><br><span class="line">        table td&#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;table&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;th&gt;热度&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;标题&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;作者&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;发表时间&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;操作&lt;/th&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;?php</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="variable">$i</span> = 1;<span class="variable">$i</span> &lt;=5; <span class="variable">$i</span>++)&#123;</span><br><span class="line">        <span class="variable">$arr</span> = array(<span class="string">'1'</span>,<span class="string">'下雨了'</span>,<span class="string">'今天没下雨怎么办'</span>,<span class="string">'admin'</span>,<span class="string">'2019-08-07'</span>,<span class="string">'80'</span>,<span class="string">'骗人的'</span>);</span><br><span class="line">        <span class="variable">$a</span> = <span class="variable">$arr</span>[0];</span><br><span class="line">        <span class="variable">$b</span> = <span class="variable">$arr</span>[1];</span><br><span class="line">        <span class="variable">$c</span> = <span class="variable">$arr</span>[2];</span><br><span class="line">        <span class="variable">$d</span> = <span class="variable">$arr</span>[3];</span><br><span class="line">        <span class="variable">$e</span> = <span class="variable">$arr</span>[4];</span><br><span class="line">        <span class="variable">$f</span> = <span class="variable">$arr</span>[5];</span><br><span class="line">        <span class="variable">$g</span> = <span class="variable">$arr</span>[6];</span><br><span class="line">        <span class="built_in">echo</span> &lt;&lt;&lt;EOF</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td&gt;<span class="variable">$f</span>&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;<span class="variable">$b</span>&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;<span class="variable">$d</span>&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;<span class="variable">$e</span>&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;<span class="variable">$g</span>&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">EOF;</span><br><span class="line">  &#125;</span><br><span class="line">    ?&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            
+                <div class="navgition-prev">
+                    <h2 class="navgition-title">上一篇: <a href="javascript:void(0);">暂无</a></h2>
+                </div>
+            
+
+            
+                <div class="navgition-next">
+                    <h2 class="navgition-title">下一篇: <a href="/2019/08/07/1/">PHP </a></h2>
+                </div>
+            
+        </div>
+    </div>
+    
+</article>
+					
+				</div>
+				<footer class="footer">
+	<p class="footer-intro">
+		
+		@2019 Hexo.
+		<br/>
+		站点描述
+	</p>
+	<a href="https://github.com/shijuuu/hexo-theme-mokusei" target="_blank" class="extra">MOKUSEI</a>
+</footer>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/org/jquery.min.js"></script>
+	<script src="/js/feature.js"></script>
+	<script>
+		var Feature = new Feature();
+		Feature.init();
+	</script>
+</body>
+</html>
