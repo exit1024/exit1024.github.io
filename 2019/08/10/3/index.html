@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content>
+	<meta name="keywords" content>
+	
+	<title>PHP编写注册添加新闻登录功能 - Hexo</title>
+  <link rel="alternate" href type="application/atom+xml">
+	<link rel="shortcut icon" href>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'huq1ytd',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<div class="body-box">
+		<div class="content-box">
+			<div class="sidebar">
+	<div class="widget-me">
+		<div class="me-avatar">
+			<a href="/"><img src="/imgs/avatar.jpg"/></a>
+		</div>
+		<h2 class="me-name">
+			<a href="/">桂花</a>
+		</h2>
+	</div>
+	<div class="widget-nav">
+		<nav class="nav-list">
+			<ul>
+				
+					<li>
+						<a href="/" class="">
+							<span>主页</span>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives/" class="">
+							<span>归档</span>
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar-wrap">
+		<div class="widget-tags">
+			<h2 class="widget-title">标签</h2>
+			
+		</div>
+	</div>
+</div>
+			<div class="content-article">
+				<i class="mobile-toggle" style="display:none;"><img src="/imgs/menu.png"/></i>
+				<div class="content-article-box">
+					<article class="article  article-post">
+    <h2 class="article-title cl">
+        <a href="/2019/08/10/3/" title="PHP编写注册添加新闻登录功能" class="title-main">PHP编写注册添加新闻登录功能</a>
+        <small class="article-time">2019-08-10</small>
+    </h2>
+    <div class="article-con">
+        
+        <h2 id="我不想PHP-拍黄片"><a href="#我不想PHP-拍黄片" class="headerlink" title="我不想PHP(拍黄片)"></a>我不想PHP(拍黄片)</h2><h2 id="注册前端HTML"><a href="#注册前端HTML" class="headerlink" title="注册前端HTML"></a>注册前端HTML</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;注册页面&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;center&gt;</span><br><span class="line">    &lt;h3&gt;请输入账户信息&lt;/h3&gt;</span><br><span class="line">    &lt;form action=<span class="string">"post_2.php"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">        &lt;p&gt;输入用户名&lt;/p&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"uname"</span> placeholdr=<span class="string">"输入用户"</span>&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p&gt;输入密码&lt;/p&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"password"</span> placeholdr=<span class="string">"输入密码"</span>&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p&gt;请输入邮箱&lt;/p&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"umali"</span> placeholdr=<span class="string">"请输入邮箱"</span>&gt;</span><br><span class="line"></span><br><span class="line">        &lt;p&gt;请输入你头像链接&lt;/p&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"img"</span> placeholdr=<span class="string">"头像"</span>&gt;</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注册后端PHP"><a href="#注册后端PHP" class="headerlink" title="注册后端PHP"></a>注册后端PHP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">session_start();</span><br><span class="line"><span class="variable">$name</span> =  base64_encode(<span class="variable">$_POST</span>[<span class="string">'uname'</span>]);</span><br><span class="line"><span class="variable">$password</span> = md5(<span class="variable">$_POST</span>[<span class="string">'password'</span>]);</span><br><span class="line"><span class="variable">$umali</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'umali'</span>]);</span><br><span class="line"><span class="variable">$img</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'img'</span>]);</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$password</span> &amp;&amp; <span class="variable">$name</span> &amp;&amp; <span class="variable">$umali</span> &amp;&amp; <span class="variable">$img</span>)&#123;</span><br><span class="line">        <span class="variable">$date</span> = time();</span><br><span class="line">        <span class="variable">$data</span> = <span class="string">"1||&#123;<span class="variable">$name</span>&#125;||&#123;<span class="variable">$password</span>&#125;||&#123;<span class="variable">$umali</span>&#125;||&#123;<span class="variable">$img</span>&#125;||0||<span class="variable">$date</span>.\n"</span>;</span><br><span class="line">        <span class="variable">$f</span> = fopen(<span class="string">'news2.db'</span>,<span class="string">'a'</span>);</span><br><span class="line">        fwrite(<span class="variable">$f</span>,<span class="variable">$data</span>);</span><br><span class="line">        fclose(<span class="variable">$f</span>);</span><br><span class="line">        <span class="variable">$_SESSION</span>[<span class="string">'uname'</span>]=<span class="variable">$name</span>;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"&lt;script&gt;alert('注册成功！将跳转到登录页面'); location.href='logi1.html';&lt;/script&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加新闻HTML"><a href="#添加新闻HTML" class="headerlink" title="添加新闻HTML"></a>添加新闻HTML</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;Edit News&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        input&#123;</span><br><span class="line">            width: 150px;</span><br><span class="line">            height: 30px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;center&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;h2&gt;请输入要添加的新闻&lt;/h2&gt;</span><br><span class="line">&lt;form action=<span class="string">"post.php"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">    &lt;p&gt;标题&lt;/p &gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"title"</span> placeholder=<span class="string">"输入标题"</span>&gt;</span><br><span class="line">    &lt;p&gt;内容&lt;/p &gt;</span><br><span class="line">    &lt;textarea name=<span class="string">"content"</span> placeholder=<span class="string">"输入新闻内容"</span>&gt;&lt;/textarea&gt;</span><br><span class="line">    &lt;p&gt;作者&lt;/p &gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"author"</span> placeholder=<span class="string">"输入名字"</span>&gt;</span><br><span class="line">    &lt;p&gt; 图片 &lt;/p &gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"img_url"</span> placeholder=<span class="string">"输入图片"</span>&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"submit"</span>value=<span class="string">"提交"</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加新闻PHP"><a href="#添加新闻PHP" class="headerlink" title="添加新闻PHP"></a>添加新闻PHP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">session_start() ;</span><br><span class="line"><span class="keyword">if</span> (!isset(<span class="variable">$_SESSION</span>[<span class="string">'uname'</span>])) &#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">'&lt;script&gt;alert("请登录!");location.href="logi1.html";&lt;/script&gt;'</span>;</span><br><span class="line">    die();&#125;</span><br><span class="line"><span class="variable">$title</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'title'</span>]) ;</span><br><span class="line"><span class="variable">$author</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'author'</span>]);</span><br><span class="line"><span class="variable">$content</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'content'</span>]) ;</span><br><span class="line"><span class="variable">$img_url</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'img_url'</span>]) ;</span><br><span class="line"></span><br><span class="line"><span class="variable">$data</span> = <span class="string">"1||&#123;<span class="variable">$title</span>&#125;||&#123;<span class="variable">$content</span>&#125;||&#123;<span class="variable">$author</span>&#125;||time||0||null||&#123;<span class="variable">$img_url</span>&#125;\n"</span> ;</span><br><span class="line">    <span class="variable">$f</span> = fopen(<span class="string">'./news.db'</span>,<span class="string">'a'</span>) ;</span><br><span class="line">    fwrite(<span class="variable">$f</span>,<span class="variable">$data</span>) ;</span><br><span class="line">    fclose(<span class="variable">$f</span>) ;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"&lt;script&gt;alert('新闻添加成功！');location.href='logi1.html';&lt;/script&gt;"</span></span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="登录功能HTML"><a href="#登录功能HTML" class="headerlink" title="登录功能HTML"></a>登录功能HTML</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;登陆页面&lt;/title&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"./a.css"</span>&gt;</span><br><span class="line"></span><br><span class="line">	&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"> &lt;div class=<span class="string">"div1"</span>&gt;</span><br><span class="line">	 &lt;form action=<span class="string">"dunlu.php"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line"> 		&lt;img src=<span class="string">"./U77logo.png"</span> class=<span class="string">"tup"</span>&gt;</span><br><span class="line"> 		&lt;br&gt;</span><br><span class="line">			&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"username"</span> placeholder=<span class="string">"手机号/邮箱"</span>&gt;</span><br><span class="line">			&lt;br&gt;</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">			&lt;input <span class="built_in">type</span>=<span class="string">"password"</span> name=<span class="string">"password"</span> placeholder=<span class="string">"密码"</span>&gt;</span><br><span class="line">			&lt;br&gt;</span><br><span class="line">				&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> name=<span class="string">""</span> style=<span class="string">"width: 20px; height: 20px"</span>&gt;</span><br><span class="line">				&lt;span style=<span class="string">"color: #D6D6D6"</span>&gt;记住我&lt;/span&gt;</span><br><span class="line">				&lt;span class=<span class="string">"kao1"</span>&gt;&lt;a href=<span class="string">""</span>&gt;注册&lt;/a&gt;&lt;/span&gt;</span><br><span class="line">				&lt;span class=<span class="string">""</span>&gt;&lt;a href=<span class="string">""</span>&gt;忘记密码&lt;/a&gt;&lt;/span&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;br&gt;</span><br><span class="line">			&lt;input class=<span class="string">"yan"</span> <span class="built_in">type</span>=<span class="string">"submit"</span> name=<span class="string">"submit"</span> value=<span class="string">"登陆"</span> style=<span class="string">"margin-top: -30px"</span>&gt;</span><br><span class="line">	 &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="登录后端处理PHP"><a href="#登录后端处理PHP" class="headerlink" title="登录后端处理PHP"></a>登录后端处理PHP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$name</span> = base64_encode(<span class="variable">$_POST</span>[<span class="string">'username'</span>]);</span><br><span class="line"><span class="variable">$password</span> = md5(<span class="variable">$_POST</span>[<span class="string">'password'</span>]);</span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$name</span> &amp;&amp; <span class="variable">$password</span>) &#123;</span><br><span class="line">    <span class="variable">$b</span> = fopen(<span class="string">'./news2.db'</span>, <span class="string">'r'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!feof(<span class="variable">$b</span>)) &#123;</span><br><span class="line">        <span class="variable">$data</span> = fgets(<span class="variable">$b</span>);</span><br><span class="line">        <span class="variable">$a</span> = explode(<span class="string">'||'</span>, <span class="variable">$data</span>);</span><br><span class="line">        var_dump(<span class="variable">$a</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (count(<span class="variable">$a</span>) != 7) &#123;</span><br><span class="line"></span><br><span class="line">           <span class="built_in">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (trim(<span class="variable">$a</span>[1]) == trim(<span class="variable">$name</span>) &amp;&amp; trim(<span class="variable">$a</span>[2]) == trim(<span class="variable">$password</span>)) &#123;</span><br><span class="line">            <span class="built_in">echo</span> <span class="string">"&lt;script&gt;alert('yes');location.href='index1.php';&lt;/script&gt;"</span>;</span><br><span class="line">            <span class="built_in">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"&lt;script&gt;alert('no');location.href='logi1.html';&lt;/script&gt;"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+    </div>
+    
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            
+                <div class="navgition-prev">
+                    <h2 class="navgition-title">上一篇: <a href="javascript:void(0);">暂无</a></h2>
+                </div>
+            
+
+            
+                <div class="navgition-next">
+                    <h2 class="navgition-title">下一篇: <a href="/2019/08/07/2/">PHP入门到放弃3新闻展示页面，从文件中读取内容，循环展示 </a></h2>
+                </div>
+            
+        </div>
+    </div>
+    
+</article>
+					
+				</div>
+				<footer class="footer">
+	<p class="footer-intro">
+		
+		@2019 Hexo.
+		<br/>
+		站点描述
+	</p>
+	<a href="https://github.com/shijuuu/hexo-theme-mokusei" target="_blank" class="extra">MOKUSEI</a>
+</footer>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/org/jquery.min.js"></script>
+	<script src="/js/feature.js"></script>
+	<script>
+		var Feature = new Feature();
+		Feature.init();
+	</script>
+</body>
+</html>
